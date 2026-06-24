@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brahman Cow &amp; Calves — Other Life — El Oasis Natural History Collections</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Josefin+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bunker:#0d1620;
+    --bunker-mid:#142433;
+    --bunker-light:#1c3349;
+    --navy-deep:#0a121b;
+    --brass:#b5904a;
+    --brass-soft:#d9b87a;
+    --cream:#ece6d8;
+    --cream-dim:#c3bca8;
+    --line:rgba(181,144,74,0.28);
+  }
+
+  *{box-sizing:border-box;}
+
+  body{
+    margin:0;
+    background:
+      radial-gradient(circle at 15% 0%, rgba(28,51,73,0.55), transparent 55%),
+      radial-gradient(circle at 85% 100%, rgba(28,51,73,0.4), transparent 50%),
+      var(--navy-deep);
+    color:var(--cream);
+    font-family:'Josefin Sans', sans-serif;
+    min-height:100vh;
+  }
+
+  .backbar{
+    background:var(--bunker);
+    border-bottom:1px solid var(--line);
+    padding:14px 24px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:0.85rem;
+    letter-spacing:0.04em;
+  }
+  .backbar a{
+    color:var(--brass-soft);
+    text-decoration:none;
+    font-weight:500;
+  }
+  .backbar a:hover{ text-decoration:underline; }
+  .backbar span{ color:var(--cream-dim); }
+
+  .wrap{
+    max-width:1080px;
+    margin:0 auto;
+    padding:48px 28px 80px;
+  }
+
+  .crumb{
+    text-align:center;
+    font-size:0.78rem;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--brass-soft);
+    margin-bottom:10px;
+  }
+
+  h1{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:600;
+    font-size:clamp(2.1rem, 4vw, 3.2rem);
+    text-align:center;
+    margin:0 0 4px;
+    color:var(--cream);
+  }
+  h1 em{
+    font-style:italic;
+    color:var(--brass-soft);
+    font-weight:500;
+  }
+
+  .subtitle{
+    text-align:center;
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:1.15rem;
+    color:var(--cream-dim);
+    margin-bottom:36px;
+  }
+
+  .plate{
+    background:linear-gradient(160deg, var(--bunker-light), var(--bunker));
+    border:1px solid var(--line);
+    border-radius:6px;
+    overflow:hidden;
+    box-shadow:0 30px 60px -20px rgba(0,0,0,0.6);
+    position:relative;
+  }
+
+  .frame-img{
+    position:relative;
+    width:100%;
+    overflow:hidden;
+  }
+  .frame-img img{
+    display:block;
+    width:100%;
+    height:auto;
+  }
+
+  .date-badge{
+    position:absolute;
+    top:18px;
+    left:18px;
+    background:rgba(10,18,27,0.82);
+    border:1px solid var(--brass);
+    color:var(--brass-soft);
+    font-size:0.72rem;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    padding:6px 12px;
+    border-radius:3px;
+    backdrop-filter:blur(2px);
+  }
+
+  .group-badge{
+    position:absolute;
+    top:18px;
+    right:18px;
+    background:rgba(181,144,74,0.92);
+    color:var(--navy-deep);
+    font-size:0.7rem;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    font-weight:600;
+    padding:6px 14px;
+    border-radius:20px;
+    opacity:0;
+    transform:translateY(-4px);
+    transition:opacity 0.25s ease, transform 0.25s ease;
+  }
+  .frame-img:hover .group-badge{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+  .info-strip{
+    padding:28px 32px 30px;
+    border-top:1px solid var(--line);
+  }
+
+  .names{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:baseline;
+    gap:14px;
+    margin-bottom:6px;
+  }
+  .common-name{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:600;
+    font-size:1.7rem;
+    color:var(--cream);
+  }
+  .latin-name{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-weight:500;
+    font-size:1.15rem;
+    color:var(--brass-soft);
+  }
+
+  .meta-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:18px;
+    font-size:0.78rem;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    color:var(--cream-dim);
+    margin-bottom:22px;
+    padding-bottom:18px;
+    border-bottom:1px solid var(--line);
+  }
+  .meta-row span strong{
+    color:var(--brass-soft);
+    font-weight:500;
+  }
+
+  .field-note{
+    font-size:1rem;
+    line-height:1.7;
+    color:var(--cream);
+    max-width:680px;
+  }
+  .field-note p{ margin:0 0 14px; }
+  .field-note p:last-child{ margin-bottom:0; }
+
+  .lineage{
+    margin-top:22px;
+    padding:18px 20px;
+    background:rgba(213,184,122,0.06);
+    border-left:3px solid var(--brass);
+    border-radius:2px;
+  }
+  .lineage .lineage-tag{
+    font-size:0.7rem;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--brass-soft);
+    margin-bottom:8px;
+    display:block;
+  }
+  .lineage p{
+    font-size:0.95rem;
+    line-height:1.7;
+    color:var(--cream);
+    margin:0;
+    max-width:680px;
+  }
+
+  .es{
+    margin-top:22px;
+    padding-top:18px;
+    border-top:1px dashed var(--line);
+  }
+  .es .lang-tag{
+    font-size:0.7rem;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--brass-soft);
+    margin-bottom:8px;
+    display:block;
+  }
+  .es p{
+    font-style:italic;
+    color:var(--cream-dim);
+    font-family:'Cormorant Garamond', serif;
+    font-size:1.05rem;
+    line-height:1.65;
+    margin:0;
+    max-width:680px;
+  }
+
+  .photo-credit{
+    margin-top:26px;
+    font-size:0.72rem;
+    letter-spacing:0.06em;
+    color:var(--cream-dim);
+    opacity:0.7;
+  }
+
+  footer{
+    text-align:center;
+    margin-top:50px;
+    font-size:0.78rem;
+    letter-spacing:0.08em;
+    color:var(--cream-dim);
+    opacity:0.65;
+  }
+
+  @media (max-width:560px){
+    .wrap{ padding:32px 16px 60px; }
+    .info-strip{ padding:22px 20px 24px; }
+    .common-name{ font-size:1.4rem; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="backbar">
+    <a href="other_catalogue_v2.html">&larr; Other Life</a>
+    <span>·</span>
+    <a href="el_oasis_garden_hall.html">Garden &amp; Grounds</a>
+  </div>
+
+  <div class="wrap">
+    <div class="crumb">Other Life · El Oasis Natural History Collections</div>
+    <h1>Brahman Cow <em>&amp; Calves</em></h1>
+    <div class="subtitle">A solid citizen of the Guanacaste backroads</div>
+
+    <div class="plate">
+      <div class="frame-img">
+        <img src="brahman_cow_plate.jpg" alt="A white Brahman cow with calves at a barbed-wire fence line, Playa Hermosa, Guanacaste">
+        <div class="date-badge">23 May</div>
+        <div class="group-badge">Mammals</div>
+      </div>
+
+      <div class="info-strip">
+        <div class="names">
+          <span class="common-name">Brahman Cow</span>
+          <span class="latin-name">Bos taurus indicus</span>
+        </div>
+
+        <div class="meta-row">
+          <span><strong>Family:</strong> Bovidae</span>
+          <span><strong>Locality:</strong> Roadside pasture, Playa Hermosa</span>
+          <span><strong>Behaviour:</strong> Grazing, attended by calves</span>
+        </div>
+
+        <div class="field-note">
+          <p>
+            A mature Brahman cow holds her ground at a barbed-wire fence line on the edge of
+            Playa Hermosa, the breed's signature traits on full display: the heavy drooping
+            ears, the loose dewlap and throat skin, the grey hump over the shoulders, and a
+            pair of neatly upturned horns. A faded brand mark is still legible high on the
+            flank.
+          </p>
+          <p>
+            Brahman and Brahman-cross cattle are the backbone of Guanacaste's free-range
+            herds, prized for heat tolerance and resistance to ticks and biting flies — the
+            same loose, ample skin that gives the breed its distinctive silhouette also
+            maximizes surface area for cooling in the dry tropical lowlands. Two calves
+            attend the scene: one pale and Brahman-typed at the fence post, another
+            reddish-brown at the frame's edge, evidence of a mixed herd typical of the
+            roadside pastures along this stretch of coast.
+          </p>
+          <p>
+            Cattle of this kind are a near-constant presence on the unpaved roads around
+            El Oasis, as much a feature of the local landscape as the deciduous dry forest
+            behind them — caught here in the brief green flush that follows the first
+            rains.
+          </p>
+        </div>
+
+        <div class="lineage">
+          <span class="lineage-tag">Lineage</span>
+          <p>
+            The breed's working papers run through three countries before they reach this
+            fence line. The actual bloodline starts in India, with four zebu breeds — Gir,
+            Guzerá (Kankrej), Nellore (Ongole), and Krishna Valley — supplying the genetic
+            base. Brazil was the critical relay station: between 1924 and 1925, the great
+            majority of the Indian zebu stock that eventually formed the breed reached the
+            United States indirectly, by way of Brazilian herds rather than direct shipment
+            from India. The breed itself, however, was assembled, named, and registered in
+            Texas — the American Brahman Breeders Association was founded in Houston in 1924
+            — making "Brahman" formally a U.S. breed built almost entirely from Old World and
+            South American stock. No Middle Eastern blood runs in the official pedigree;
+            the broader zebu lineage (<em>Bos taurus indicus</em>) is South Asian, though the
+            humped cattle of the Middle East descend from the same ancient zebu root stock.
+            From Texas the breed spread south again, into Mexico and Central America,
+            arriving in Costa Rica's cattle country as one more import in a chain that began
+            on the Indian subcontinent a century and a half ago.
+          </p>
+        </div>
+
+        <div class="es">
+          <span class="lang-tag">Español</span>
+          <p>
+            El linaje de la raza atraviesa tres países antes de llegar a esta cerca. El
+            origen genético real está en India, con cuatro razas cebú — Gir, Guzerá
+            (Kankrej), Nelore (Ongole) y Krishna Valley. Brasil fue la estación de
+            relevo decisiva: entre 1924 y 1925, la mayor parte del ganado cebú indio que
+            terminó formando la raza llegó a Estados Unidos de forma indirecta, a través
+            de hatos brasileños. La raza en sí, sin embargo, se conformó, nombró y
+            registró en Texas, lo que la convierte formalmente en una raza estadounidense
+            construida casi enteramente con ganado del Viejo Mundo y de Sudamérica. No hay
+            sangre de Oriente Medio en el pedigrí oficial, aunque el ganado cebú de esa
+            región comparte el mismo tronco ancestral antiguo.
+          </p>
+        </div>
+
+        <div class="photo-credit">Olympus E-M1X · 150–400mm f/4.5 PRO · processed in DxO DeepPRIME XD</div>
+      </div>
+    </div>
+
+    <footer>El Oasis Natural History Collections — Other Life</footer>
+  </div>
+
+</body>
+</html>
